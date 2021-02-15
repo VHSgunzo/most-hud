@@ -1,0 +1,13 @@
+#!/bin/bash
+cd $(dirname "${BASH_SOURCE[0]}")
+sleep 3
+killall -9 conky
+conky -d -c sysinfo.conf &
+conky -d -c cpu.conf &
+conky -d -c memory.conf &
+conky -d -c nvidia_panel.conf &
+conky -d -c disks.conf &
+conky -d -c network.conf &
+conky -d -c processes.conf &
+conky -d -c log.conf &
+conky -d -c clock.conf &
